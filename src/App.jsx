@@ -15,11 +15,20 @@ const defaultitems = [
 
 function App() {
   const [items, setItems] = useState(defaultitems);
-
+   
   const itemComponents = items.map(item => {
+    const handleChange = () =>{
+      console.log('handle change for item', item);
+       setItems(items.map(newItem => {
+        if(newItem.id === item.id){
+          return{...newItem, done: !item.done};
+        }
+      }));
+    };
+
     return(
       <div key={item.id}>
-        <input type="checkbox" checked={item.done}/>{item.text}
+        <input type="checkbox" checked={item.done} onChange={handleChange}/>{item.text}
       </div>
     );
   });
