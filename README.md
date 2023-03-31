@@ -10,6 +10,6 @@ Install Node 14+
 ## Features
 
 - [] Add a todo item
-- [] Listi todo items
-- [] Remove todo idem
-- [] Marko todo item as done
+- [x] Listi todo items
+- [x] Remove todo idem
+- [x] Marko todo item as done
